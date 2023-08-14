@@ -1,0 +1,53 @@
+.iti {
+  display: block;
+  width: 100%;
+  margin-bottom: 0em !important;
+}
+.iti-mobile .iti--container {
+  color: #17171b;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  top: 3em;
+  bottom: 3em;
+  left: 3em;
+  right: 3em;
+  position: fixed;
+  z-index: 99999999999999999999999;
+}
+.iti__dial-code {
+  font-size: 1.6em;
+  color: rgba(0, 0, 0, 0.5);
+}
+.iti__country-name,
+.iti__flag-box {
+  margin-right: 0.6em;
+  font-size: 1.6em;
+}
+.iti--separate-dial-code .iti__selected-dial-code {
+  margin-left: 0.3em;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+.iti__selected-flag {
+  z-index: 99;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 0.8em 0 0.8em;
+}
+.iti--separate-dial-code .iti__selected-flag {
+  border-top-left-radius: 0.9em;
+  border-bottom-left-radius: 0.9em;
+  background-color: #eeeaea;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+  background-color: #e1dada;
+}
+.iti__country-list {
+  z-index: 99999 !important;
+}
