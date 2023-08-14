@@ -397,7 +397,7 @@ const moneyInputs = document.querySelectorAll(".form__money-field");
 //Ð—Ð°Ð¿Ñ€ÐµÑ‚ Ð²Ð²Ð¾Ð´Ð° Ñ†Ð¸Ñ„Ñ€ Ð² Ð¿Ð¾Ð»Ðµ Ð¸Ð¼ÐµÐ½Ð¸
 emailInputs.forEach((input) => {
   input.addEventListener("keypress", function (e) {
-    console.log(e);
+    //console.log(e);
     //console.log(e.keyCode);
     if (
       e.keyCode != 8 &&
@@ -407,7 +407,7 @@ emailInputs.forEach((input) => {
       return e.preventDefault();
   });
   input.addEventListener("input", function (e) {
-    console.log(e);
+    //console.log(e);
     if (e.inputType == "insertFromPaste") {
       // ÐÐ° ÑÐ»ÑƒÑ‡Ð°Ð¹, ÐµÑÐ»Ð¸ ÑƒÐ¼ÑƒÐ´Ñ€Ð¸Ð»Ð¸ÑÑŒ Ð²Ð²ÐµÑÑ‚Ð¸ Ñ‡ÐµÑ€ÐµÐ· ÐºÐ¾Ð¿Ð¸Ð¿Ð°ÑÑ‚ Ð¸Ð»Ð¸ Ð°Ð²Ñ‚Ð¾-Ð´Ð¾Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ.
       input.value = input.value
