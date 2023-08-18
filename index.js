@@ -580,7 +580,7 @@ dateInputs.forEach((input) => {
 });
 
 document.querySelector(".input.date-task-maked").value =
-  mm + "." + dd + "." + yyyy + " " + thh + ":" + tmm;
+  mm + "-" + dd + "-" + yyyy + " " + thh + ":" + tmm;
  
 //Ð”Ð¾Ð±Ð°Ð²Ð»ÑÐµÐ¼ Ð² Ð¿Ð¾Ð»Ðµ Ð²Ð²Ð¾Ð´Ð° URL Ð°Ð´Ñ€ÐµÑ ÑÑ‚Ñ€Ð°Ñ†Ð¸Ñ†Ñ‹
 const urlInput = document.querySelector(".input.url");
