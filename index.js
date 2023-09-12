@@ -463,7 +463,7 @@ function removeErrorClassOnInput(input) {
   const currentForm = input.closest("form");
   input.addEventListener("input", () => {
     input.classList.remove("form__field-error");
-    var dropdownInputWrapper = input.closest(".select-category");
+    var dropdownInputWrapper = input.closest(".w-dropdown");
     if (dropdownInputWrapper) {
       var selectToggle = dropdownInputWrapper.querySelector(".select-toggle");
       selectToggle.classList.remove("form__field-error");
@@ -515,8 +515,9 @@ function formValidation(form) {
     // }
 
     if (dataset.required === "true") {
-      var dropdownInputWrapper = input.closest(".select-category"),
+      var dropdownInputWrapper = input.closest(".w-dropdown"),
         isTypeSelect = input.classList.contains("form__type-select"),
+        isCitySelect = input.classList.contains("form__city-select"),
         isBottomField = input.classList.contains("form__field--bottom");
 
       if (dropdownInputWrapper)
@@ -527,6 +528,11 @@ function formValidation(form) {
           selectToggle.classList.add("form__field-error");
         }
         if (isTypeSelect) {
+          form
+            .querySelector(".form__field-tooltip--type")
+            .classList.remove("is--hidden");
+        }
+        if (isCitySelect) {
           form
             .querySelector(".form__field-tooltip--type")
             .classList.remove("is--hidden");
