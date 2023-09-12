@@ -628,7 +628,9 @@ $('[data-select="form-type"]').on("change", function () {
     moneyRadioFields = currentForm.find(".form__money-radio"),
     subjectField = currentForm.find(".form__subject-field"),
     bodyField = currentForm.find(".form__body-field"),
-    bodyFieldTooltip = currentForm.find(".tooltip-text-area");
+    bodyFieldTooltip = currentForm.find(".tooltip-text-area"),
+    citySelectField = currentForm.find(".form__sity-select"),
+    citySelectDrodown = currentForm.find(".form__city-field-dd");
 
   switch (formType) {
     case "Fotografer":
@@ -637,6 +639,7 @@ $('[data-select="form-type"]').on("change", function () {
         .find(".is--photograph-content")
         .removeClass("is--hidden");
       bodyFieldTooltip.removeClass("is--hidden");
+      citySelectDrodown.removeClass("form__field-hide");
       subjectField.attr("placeholder", "Misalnya, pemotretan pernikahan");
       bodyField.attr(
         "placeholder",
@@ -666,6 +669,7 @@ $('[data-select="form-type"]').on("change", function () {
       bodyFieldTooltip.find(".is--teacher-content").addClass("is--hidden");
       bodyFieldTooltip.find(".is--photograph-content").addClass("is--hidden");
       bodyFieldTooltip.addClass("is--hidden");
+      citySelectDrodown.addClass("form__field-hide");
       subjectField.attr("placeholder", "Misalnya, seorang ilustrator");
       bodyField.attr(
         "placeholder",
@@ -694,6 +698,7 @@ $('[data-select="form-type"]').on("change", function () {
       bodyFieldTooltip.find(".is--photograph-content").addClass("is--hidden");
       bodyFieldTooltip.find(".is--teacher-content").removeClass("is--hidden");
       bodyFieldTooltip.removeClass("is--hidden");
+      citySelectDrodown.addClass("form__field-hide");
       subjectField.attr(
         "placeholder",
         "Misalnya, mempersiapkan ujian bahasa Inggris"
