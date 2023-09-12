@@ -640,6 +640,7 @@ $('[data-select="form-type"]').on("change", function () {
         .removeClass("is--hidden");
       bodyFieldTooltip.removeClass("is--hidden");
       citySelectDrodown.removeClass("form__field-hide");
+      citySelectDrodown.find('select').attr("data-required", "true");
       subjectField.attr("placeholder", "Misalnya, pemotretan pernikahan");
       bodyField.attr(
         "placeholder",
@@ -670,6 +671,7 @@ $('[data-select="form-type"]').on("change", function () {
       bodyFieldTooltip.find(".is--photograph-content").addClass("is--hidden");
       bodyFieldTooltip.addClass("is--hidden");
       citySelectDrodown.addClass("form__field-hide");
+      citySelectDrodown.find('select').removeAttr("data-required");
       subjectField.attr("placeholder", "Misalnya, seorang ilustrator");
       bodyField.attr(
         "placeholder",
@@ -699,6 +701,7 @@ $('[data-select="form-type"]').on("change", function () {
       bodyFieldTooltip.find(".is--teacher-content").removeClass("is--hidden");
       bodyFieldTooltip.removeClass("is--hidden");
       citySelectDrodown.addClass("form__field-hide");
+      citySelectDrodown.find('select').removeAttr("data-required");
       subjectField.attr(
         "placeholder",
         "Misalnya, mempersiapkan ujian bahasa Inggris"
