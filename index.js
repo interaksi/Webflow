@@ -609,10 +609,10 @@ function checkValidationFormOnSubmit(formClassName, isNeedToSendEvent) {
   };
 
   inputs.forEach((input) => {
-    const isRequiredInput = input.getAttribute("data-required");
-    if (isRequiredInput) {
+    //const isRequiredInput = input.getAttribute("data-required");
+    //if (isRequiredInput) {
       removeErrorClassOnInput(input);
-    }
+    //}
   });
 
   $(formClassName).submit(onSubmitHandler);
