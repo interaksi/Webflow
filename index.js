@@ -359,6 +359,11 @@ if ($("#wf-form-Make-request-form").length) {
     $("#wf-form-Make-request-form").attr("novalidate", "");
 }
 
+if ($("#wf-form-Make-request-form-find-2").length) {
+    checkValidationFormOnSubmit("#wf-form-Make-request-form-find-2", true);
+    $("#wf-form-Make-request-form-find-2").attr("novalidate", "");
+}
+
 if ($("#wf-form-BecomePerformerForm").length) {
     checkValidationFormOnSubmit("#wf-form-BecomePerformerForm", false);
     $("#wf-form-BecomePerformerForm").attr("novalidate", "");
